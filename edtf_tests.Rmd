@@ -1,0 +1,12 @@
+---
+title: "DaTimEx Demo"
+author: "John Ellis. `jellis5134@floridapoly.edu`"
+output: html_notebook
+---
+
+```{r, warning = FALSE, message = FALSE}
+source("edtf_tests.r")
+
+solution <- edtf_resolve("@ + m2 d5 H7 + 9h 11m 13s")
+print(as.character(as_datetime(as.numeric(substr(solution, 2, nchar(solution))), tz = Sys.timezone())))
+```
